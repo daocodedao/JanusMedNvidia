@@ -56,7 +56,7 @@
   <a href="#4-license"><b>📜 License</b></a> |
   <a href="#5-citation"><b>📖 Citation</b></a> <br>
   <!-- 📄 Paper Link (<a href="https://arxiv.org/abs/2410.13848"><b>Janus</b></a>, <a href="https://arxiv.org/abs/2410.13848"><b>JanusFlow</b></a>) | -->
-  🤗 Online Demo (<a href="https://huggingface.co/spaces/deepseek-ai/Janus-Pro-7B"><b>Janus-Pro-7B</b></a>, <a href="https://huggingface.co/spaces/deepseek-ai/Janus-1.3B"><b>Janus</b></a>, <a href="https://huggingface.co/spaces/deepseek-ai/JanusFlow-1.3B"><b>JanusFlow</b></a>)
+  🤗 Online Demo (<a href="https://huggingface.co/spaces/deepseek-ai/Janus-Pro-7B"><b>Janus-Pro-7B</b></a>, <a href="https://huggingface.co/spaces/ckpts/Janus-Pro-1B"><b>Janus</b></a>, <a href="https://huggingface.co/spaces/deepseek-ai/JanusFlow-1.3B"><b>JanusFlow</b></a>)
 </p>
 
 
@@ -68,7 +68,7 @@
 
 **2024.10.23**: Evaluation code for reproducing the multimodal understanding results from the paper has been added to VLMEvalKit. Please refer to [this link]( https://github.com/open-compass/VLMEvalKit/pull/541).
 
-**2024.10.20**: (1) Fix a bug in [tokenizer_config.json](https://huggingface.co/deepseek-ai/Janus-1.3B/blob/main/tokenizer_config.json). The previous version caused classifier-free guidance to not function properly, resulting in relatively poor visual generation quality. (2) Release Gradio demo ([online demo](https://huggingface.co/spaces/deepseek-ai/Janus-1.3B) and  [local](#gradio-demo)).
+**2024.10.20**: (1) Fix a bug in [tokenizer_config.json](https://huggingface.co/ckpts/Janus-Pro-1B/blob/main/tokenizer_config.json). The previous version caused classifier-free guidance to not function properly, resulting in relatively poor visual generation quality. (2) Release Gradio demo ([online demo](https://huggingface.co/spaces/ckpts/Janus-Pro-1B) and  [local](#gradio-demo)).
 
 
 ## 1. Introduction
@@ -110,7 +110,7 @@ permitted under these terms.
 
 | Model                 | Sequence Length | Download                                                                    |
 |-----------------------|-----------------|-----------------------------------------------------------------------------|
-| Janus-1.3B | 4096            | [🤗 Hugging Face](https://huggingface.co/deepseek-ai/Janus-1.3B) |
+| Janus-1.3B | 4096            | [🤗 Hugging Face](https://huggingface.co/ckpts/Janus-Pro-1B) |
 | JanusFlow-1.3B | 4096        | [🤗 Hugging Face](https://huggingface.co/deepseek-ai/JanusFlow-1.3B) |
 | Janus-Pro-1B | 4096            | [🤗 Hugging Face](https://huggingface.co/deepseek-ai/Janus-Pro-1B) |
 | Janus-Pro-7B | 4096        | [🤗 Hugging Face](https://huggingface.co/deepseek-ai/Janus-Pro-7B) |
@@ -327,7 +327,7 @@ from janus.models import MultiModalityCausalLM, VLChatProcessor
 from janus.utils.io import load_pil_images
 
 # specify the path to the model
-model_path = "deepseek-ai/Janus-1.3B"
+model_path = "ckpts/Janus-Pro-1B"
 vl_chat_processor: VLChatProcessor = VLChatProcessor.from_pretrained(model_path)
 tokenizer = vl_chat_processor.tokenizer
 
@@ -382,7 +382,7 @@ from janus.models import MultiModalityCausalLM, VLChatProcessor
 
 
 # specify the path to the model
-model_path = "deepseek-ai/Janus-1.3B"
+model_path = "ckpts/Janus-Pro-1B"
 vl_chat_processor: VLChatProcessor = VLChatProcessor.from_pretrained(model_path)
 tokenizer = vl_chat_processor.tokenizer
 
@@ -473,7 +473,7 @@ generate(
 ```
 
 ### Gradio Demo
-We have deployed online demo in [Huggingface](https://huggingface.co/spaces/deepseek-ai/Janus-1.3B).
+We have deployed online demo in [Huggingface](https://huggingface.co/spaces/ckpts/Janus-Pro-1B).
 
 
 For the local gradio demo, you can run with the following command:
