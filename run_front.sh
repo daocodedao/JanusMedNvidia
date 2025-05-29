@@ -37,8 +37,8 @@ fi
 # 否则继续启动服务
 mkdir -p logs
 
-echo "${YELLOW}nohup $pythonPath run $jobDir/$jobName  --server.port 8502 > logs/${logName}.log 2>&1 &${NOCOLOR}"
-nohup $pythonPath run $jobDir/$jobName  --server.port 8502 > logs/${logName}.log 2>&1 &
+echo "${YELLOW}nohup $pythonPath  $jobDir/$jobName  --server.port 8502 > logs/${logName}.log 2>&1 &${NOCOLOR}"
+nohup $pythonPath $jobDir/$jobName  --server.port 8502 > logs/${logName}.log 2>&1 &
 
 echo ------Web前端服务已启动-----
 
