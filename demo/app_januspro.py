@@ -1,13 +1,15 @@
 import gradio as gr
 import torch
 from transformers import AutoConfig, AutoModelForCausalLM
+from PIL import Image
+import numpy as np
+
+import time
+import os,sys
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from janus.models import MultiModalityCausalLM, VLChatProcessor
 from janus.utils.io import load_pil_images
-from PIL import Image
 
-import numpy as np
-import os
-import time
 # import spaces  # Import spaces for ZeroGPU compatibility
 
 
